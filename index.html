@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JEP2373-December-YTTO</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://www.gstatic.com/external_hosted/polymer/custom.elements.min.js"></script>
+	<script src="https://www.gstatic.com/ads/ci/ytclosebutton/1/ytclosebutton_min.js"></script>
+</head>
+<body>
+<div class="banner">
+	<div id="snow"><canvas width="100%" height="100%" class="snow"></canvas></div>
+	<div id="minimise-ad">
+		<div class="main-backdrop"><img src="assets/main_backdrop.jpg" alt="" /></div>
+		<div class="main-title"><img src="assets/main_title.png" alt="" /></div>
+		<div id="light">
+			<div class="vehicle-light" id="one-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light1"></div>
+			</div>
+			<div class="vehicle-light" id="two-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light2"></div>
+			</div>
+			<div class="vehicle-light" id="three-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light3"></div>
+			</div>
+			<div class="vehicle-light" id="four-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light3"></div>
+			</div>
+			<div class="vehicle-light" id="five-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light2"></div>
+			</div>
+			<div class="vehicle-light" id="six-light">
+				<div class="head-light left"></div>
+				<div class="head-light right"></div>
+				<div class="light1"></div>
+			</div>
+		</div>
+
+		<ul id="hotspot" style="display:none">
+			<li class="btn-hotspot" id="one-hotspot" target-information="jeep1" target-light="one-light"></li>
+			<li class="btn-hotspot" id="two-hotspot" target-information="jeep2" target-light="two-light"></li>
+			<li class="btn-hotspot" id="three-hotspot" target-information="jeep3" target-light="three-light"></li>
+			<li class="btn-hotspot" id="four-hotspot" target-information="jeep4" target-light="four-light"></li>
+			<li class="btn-hotspot" id="five-hotspot" target-information="jeep5" target-light="five-light"></li>
+			<li class="btn-hotspot" id="six-hotspot" target-information="jeep6" target-light="six-light"></li>
+		</ul>
+
+		<!--		<p class="message"><img src="assets/msg.png" alt=""/></p>-->
+		<div class="logo-jeep"></div>
+	</div>
+
+	<div id="expanse-ad" style="display:none">
+		<!--jeep1-->		
+		<div class="information-car" id="jeep1">
+			<h1>patriot</h1>
+			<div class="pre pagination" target-information="six-hotspot">Previous</div>
+			<div class="next pagination" target-information="two-hotspot">Next</div>
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+						<li id="jeep1-silver"><img src="assets/patriot/vehicles_patriot_silver.gif" alt="" /></li>
+						<li id="jeep1-black"><img src="assets/patriot/vehicles_patriot_black.gif" alt="" /></li>
+						<li id="jeep1-white"><img src="assets/patriot/vehicles_patriot_white.gif" alt="" /></li>
+						<li id="jeep1-red"><img src="assets/patriot/vehicles_patriot_red.gif" alt="" /></li>
+						<li id="jeep1-ecogreen" class="active"><img src="assets/patriot/vehicles_patriot_ecogreen.gif" alt="" /></li>
+						<li id="jeep1-granite"><img src="assets/patriot/vehicles_patriot_granite.gif" alt="" /></li>
+						<li id="jeep1-steel"><img src="assets/patriot/vehicles_patriot_steel.gif" alt="" /></li>
+						<li id="jeep1-trueblue"><img src="assets/patriot/vehicles_patriot_trueblue.gif" alt="" /></li>
+					</ul>
+					<div><img src="assets/patriot/vehicles_patriot_body.png" alt="" /></div>
+				</div>
+				<h4>eight colours available</h4>
+				<ul class="color-car">
+					<li class="color-silver color" target-color="jeep1-silver"></li>
+					<li class="color-black color" target-color="jeep1-black"></li>
+					<li class="color-white color" target-color="jeep1-white"></li>
+					<li class="color-red color" target-color="jeep1-red"></li>
+					<li class="color-ecogreen color active" target-color="jeep1-ecogreen"></li>
+					<li class="color-granite color" target-color="jeep1-granite"></li>
+					<li class="color-steel color" target-color="jeep1-steel"></li>
+					<li class="color-trueblue color" target-color="jeep1-trueblue"></li>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2>FUN, FREEDOM<br> AND VERSATILITY</h2>
+				<h3>From $25.5k drive away*</h3>
+				<p>This modern sport-utility is the latest expression of Jeep® brand freedom, adventure and classic styling.</p>
+			</div>
+			<div class="clear"></div>
+			<p class="note">*Offer on Jeep Patriot Sport 4x2 2.0L Petrol with manual transmission.Drive away price shown includes all on-road costs and Black, Bright White or Billet Silver paint. All other paint colours incur an additional $500. Applies to Jeep Patriot 2.0L 4x2 petrol variants.</p>
+		</div>
+		<!--end jeep1-->
+
+		<!--jeep2-->		
+		<div class="information-car" id="jeep2">
+			<h1>Compass</h1>
+			<div class="pre pagination" target-information="one-hotspot">Previous</div>
+			<div class="next pagination" target-information="three-hotspot">Next</div>
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+						<li id="jeep2-silver"><img src="assets/compass/vehicles_compass_silver.gif" alt="" /></li>
+						<li id="jeep2-black"><img src="assets/compass/vehicles_compass_black.gif" alt="" /></li>
+						<li id="jeep2-red"><img src="assets/compass/vehicles_compass_red.gif" alt="" /></li>
+						<li id="jeep2-ecogreen" class="active"><img src="assets/compass/vehicles_compass_ecogreen.gif" alt="" /></li>
+						<li id="jeep2-granite"><img src="assets/compass/vehicles_compass_granite.gif" alt="" /></li>
+						<li id="jeep2-steel"><img src="assets/compass/vehicles_compass_steel.gif" alt="" /></li>
+						<li id="jeep2-trueblue"><img src="assets/compass/vehicles_compass_trueblue.gif" alt="" /></li>
+						<li id="jeep2-white"><img src="assets/compass/vehicles_compass_white.gif" alt=""/></li>
+                    </ul>
+					</ul>
+					<div><img src="assets/compass/vehicles_compass_body.png" alt="" /></div>
+				</div>
+				<h4>eight colours available</h4>
+				<ul class="color-car">
+					<li class="color-silver color" target-color="jeep2-silver"></li>
+					<li class="color-black color" target-color="jeep2-black"></li>
+					<li class="color-red color" target-color="jeep2-red"></li>
+					<li class="color-ecogreen color active" target-color="jeep2-ecogreen"></li>
+					<li class="color-granite color" target-color="jeep2-granite"></li>
+					<li class="color-steel color" target-color="jeep2-steel"></li>
+					<li class="color-trueblue color" target-color="jeep2-trueblue"></li>
+					<li class="color-white color" target-color="jeep2-white"></li>
+                </ul>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2>FIND YOUR <br>FREEDOM</h2>
+				<h3>From $27k drive away*</h3>
+				<p>A stylish and value-packed compact SUV<br> that pushes new possibilities with efficient performance.</p>
+			</div>
+			<div class="clear"></div>
+			<p class="note">*Offer on Jeep Compass Sport 4x2 2.0L Petrol with manual transmission. Drive away price shown includes all on-road costs and Black, Bright White or Billet Silver paint. All other paint colours incur an additional $500. Image is shown with optional 18-inch alloy wheel.</p>
+		</div>
+		<!--end jeep2-->
+
+		<!--jeep3-->		
+		<div class="information-car" id="jeep3">
+			<h1>RENEGADE</h1>
+			<div class="pre pagination" target-information="two-hotspot">Previous</div>
+			<div class="next pagination" target-information="four-hotspot">Next</div>
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+						<li id="jeep3-black"><img src="assets/renegade/vehicles_renegade_black.gif" alt="" /></li>
+						<li id="jeep3-blue"><img src="assets/renegade/vehicles_renegade_blue.gif" alt="" /></li>
+						<li id="jeep3-carbonblack"><img src="assets/renegade/vehicles_renegade_carbonblack.gif" alt="" /></li>
+						<li id="jeep3-commando"><img src="assets/renegade/vehicles_renegade_commando.gif" alt="" /></li>
+						<li id="jeep3-glacier"><img src="assets/renegade/vehicles_renegade_glacier.gif" alt="" /></li>
+						<li id="jeep3-orange"><img src="assets/renegade/vehicles_renegade_orange.gif" alt="" /></li>
+						<li id="jeep3-red"><img src="assets/renegade/vehicles_renegade_red.gif" alt="" /></li>
+						<li id="jeep3-sand"><img src="assets/renegade/vehicles_renegade_sand.gif" alt="" /></li>
+						<li id="jeep3-white"><img src="assets/renegade/vehicles_renegade_white.gif" alt="" /></li>
+						<li id="jeep3-yellow" class="active"><img src="assets/renegade/vehicles_renegade_yellow.gif" alt="" /></li>
+					</ul>
+					<div><img src="assets/renegade/vehicles_renegade_body.png" alt="" /></div>
+				</div>
+				<h4>ten colours available</h4>
+				<ul class="color-car">
+					<li class="color-black color" target-color="jeep3-black"></li>
+					<li class="color-blue color" target-color="jeep3-blue"></li>
+					<li class="color-carbonblack color" target-color="jeep3-carbonblack"></li>
+					<li class="color-commando color" target-color="jeep3-commando"></li>
+					<li class="color-glacier color" target-color="jeep3-glacier"></li>
+					<li class="color-orange color" target-color="jeep3-orange"></li>
+					<li class="color-red color" target-color="jeep3-red"></li>
+					<li class="color-sand color" target-color="jeep3-sand"></li>
+					<li class="color-white color" target-color="jeep3-white"></li>
+					<li class="color-yellow color active" target-color="jeep3-yellow"></li>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2>EQUIPPED FOR<br> EXCITEMENT</h2>
+				<!--				<h3>From $35k drive away*</h3>-->
+				<p>Get out. Get lost. Get found. See the<br>
+				possibilities and redefine adventure. <br>
+				Throw away your maps and chart a<br>
+				new course.  The Jeep Renegade takes<br>
+				on the world of the small SUV in a big<br>
+				new way.</p>
+			</div>
+			<div class="clear"></div>
+			<p class="note">*Overseas model shown. Not all features shown may be available in Australia. For the full details of features available in Australia,<br> please contact an authorised Jeep Dealer.</p>
+		</div>
+		<!--end jeep3-->
+
+		<!--jeep4-->		
+		<div class="information-car" id="jeep4">
+			<h1>grand CHEROKEE</h1>
+			<div class="pre pagination" target-information="three-hotspot">Previous</div>
+			<div class="next pagination" target-information="five-hotspot">Next</div>
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+						<li id="jeep4-billet"><img src="assets/grand-cherokee/vehicles_gc_billet.gif" alt="" /></li>
+						<li id="jeep4-black"><img src="assets/grand-cherokee/vehicles_gc_black.gif" alt="" /></li>
+						<li id="jeep4-blue"><img src="assets/grand-cherokee/vehicles_gc_blue.gif" alt="" /></li>
+						<li id="jeep4-cashmere"><img src="assets/grand-cherokee/vehicles_gc_cashmere.gif" alt="" /></li>
+						<li id="jeep4-granite"><img src="assets/grand-cherokee/vehicles_gc_granite.gif" alt="" /></li>
+						<li id="jeep4-green"><img src="assets/grand-cherokee/vehicles_gc_green.gif" alt="" /></li>
+						<li id="jeep4-red" class="active"><img src="assets/grand-cherokee/vehicles_gc_red.gif" alt="" /></li>
+						<li id="jeep4-steel"><img src="assets/grand-cherokee/vehicles_gc_steel.gif" alt="" /></li>
+						<li id="jeep4-white"><img src="assets/grand-cherokee/vehicles_gc_white.gif" alt="" /></li>
+					</ul>
+					<div><img src="assets/grand-cherokee/vehicles_gc_body.png" alt="" /></div>
+				</div>
+				<h4>nine colours available</h4>
+				<ul class="color-car">
+					<li class="color-billet color" target-color="jeep4-billet"></li>
+					<li class="color-black color" target-color="jeep4-black"></li>
+					<li class="color-trueblue color" target-color="jeep4-blue"></li>
+					<li class="color-cashmere color" target-color="jeep4-cashmere"></li>
+					<li class="color-granite color" target-color="jeep4-granite"></li>
+					<li class="color-green color" target-color="jeep4-green"></li>
+					<li class="color-red color active" target-color="jeep4-red"></li>
+					<li class="color-steel color" target-color="jeep4-steel"></li>
+					<li class="color-white color" target-color="jeep4-white"></li>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2>The Ultimate<br> luxury</h2>
+				<h3>From $46k drive away*</h3>
+				<p>Unrivaled. The Grand Cherokee sets extraordinary new standards for performance, luxury and attention to detail.</p>
+			</div>
+			<div class="clear"></div>
+			<p class="note">*Offer on a Grand Cherokee Laredo 4x2 3.6L Petrol with automatic transmission. Drive away price shown includes all on-road costs<br> and Bright White and Billet Silver paint. All other paint colours incur an additional $500.</p>
+		</div>
+		<!--end jeep4-->
+
+		<!--jeep5-->		
+		<div class="information-car" id="jeep5">
+			<h1>wrangler unlimited</h1>
+			<div class="pre pagination" target-information="four-hotspot">Previous</div>
+			<div class="next pagination" target-information="six-hotspot">Next</div>
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+						<li id="jeep5-anvil"><img src="assets/wrangler/vehicles_wrangler_anvil.gif" alt="" /></li>
+						<li id="jeep5-billet" class="active"><img src="assets/wrangler/vehicles_wrangler_billet.gif" alt="" /></li>
+						<li id="jeep5-black"><img src="assets/wrangler/vehicles_wrangler_black.gif" alt="" /></li>
+						<li id="jeep5-blue"><img src="assets/wrangler/vehicles_wrangler_blue.gif" alt="" /></li>
+						<li id="jeep5-red"><img src="assets/wrangler/vehicles_wrangler_red.gif" alt="" /></li>
+						<li id="jeep5-tank"><img src="assets/wrangler/vehicles_wrangler_tank.gif" alt="" /></li>
+						<li id="jeep5-white"><img src="assets/wrangler/vehicles_wrangler_white.gif" alt="" /></li>
+						<li id="jeep5-yellow"><img src="assets/wrangler/vehicles_wrangler_yellow.gif" alt="" /></li>
+					</ul>
+					<div><img src="assets/wrangler/vehicles_wrangler_body.png" alt="" /></div>
+				</div>
+				<h4>eight colours available</h4>
+				<ul class="color-car">
+					<li class="color-anvil color" target-color="jeep5-anvil"></li>
+					<li class="color-billet color active" target-color="jeep5-billet"></li>
+					<li class="color-black color" target-color="jeep5-black"></li>
+					<li class="color-blue color" target-color="jeep5-blue"></li>
+					<li class="color-red color" target-color="jeep5-red"></li>
+					<li class="color-tank color" target-color="jeep5-tank"></li>
+					<li class="color-white color" target-color="jeep5-white"></li>
+					<li class="color-yellow color" target-color="jeep5-yellow"></li>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2 style="font-size:23px;">summer lasts longer in a wrangler</h2>
+				<!--				<h3>From $35k drive away*</h3>-->
+				<p>With a go anywhere attitude and legendary off-road capability the Jeep Wrangler Unlimited really is the gear you need.</p>
+			</div>
+			<div class="clear"></div>
+			<p class="note">*Overseas model shown. Not all features shown may be available in Australia. For the full details of features available in Australia,<br> please contact an authorised Jeep Dealer.</p>
+		</div>
+		<!--end jeep5-->
+
+		<!--jeep6-->		
+		<div class="information-car" id="jeep6">
+			<h1>CHEROKEE</h1>
+			<div class="pre pagination" target-information="five-hotspot">Previous</div>
+			<div class="next pagination" target-information="one-hotspot">Next</div>
+
+			<div class="gallery">
+				<div class="pic">
+					<ul class="gallery-color">
+					<li id="jeep6-anvil"><img src="assets/cherokee/vehicles_cherokee_anvil.gif" alt="" /></li>
+					<li id="jeep6-billet"><img src="assets/cherokee/vehicles_cherokee_billet.gif" alt="" /></li>
+					<li id="jeep6-black"><img src="assets/cherokee/vehicles_cherokee_black.gif" alt="" /></li>
+					<li id="jeep6-blue"><img src="assets/cherokee/vehicles_cherokee_blue.gif" alt="" /></li>
+					<li id="jeep6-cashmere" class="active"><img src="assets/cherokee/vehicles_cherokee_cashmere.gif" alt="" /></li>
+					<li id="jeep6-ecogreen"><img src="assets/cherokee/vehicles_cherokee_ecogreen.gif" alt="" /></li>
+					<li id="jeep6-red"><img src="assets/cherokee/vehicles_cherokee_red.gif" alt="" /></li>
+					<li id="jeep6-white"><img src="assets/cherokee/vehicles_cherokee_white.gif" alt="" /></li>
+					</ul>
+					<div><img src="assets/cherokee/vehicles_cherokee_body.png" alt="" /></div>
+				</div>
+
+				<h4>eight colours available</h4>
+				<ul class="color-car">
+					<li class="color-anvil color" target-color="jeep6-anvil"></li>
+					<li class="color-billet color" target-color="jeep6-billet"></li>
+					<li class="color-black color" target-color="jeep6-black"></li>
+					<li class="color-trueblue color" target-color="jeep6-blue"></li>
+					<li class="color-cashmere color active" target-color="jeep6-cashmere"></li>
+					<li class="color-ecogreen color" target-color="jeep6-ecogreen"></li>
+					<li class="color-red color" target-color="jeep6-red"></li>
+					<li class="color-white color" target-color="jeep6-white"></li>
+				</ul>
+			</div>
+			<div class="infor">
+				<h2>PRETEND<br> NO MORE</h2>
+				<h3>From $35k drive away*</h3>
+				<p>The All-New Cherokee delivers superior performance, exceptional fuel economy and craftsmanship with the added capability of a rugged Jeep®.</p>
+			</div>
+
+		<div class="clear"></div>
+		<p class="note">*Offer on Jeep Cherokee Sport 4x2 2.4L Petrol with automatic transmission. Drive away price shown includes all on-road costs and Bright White paint. All other paint colours incur an additional $500.</p>
+		</div>
+		<!--end jeep6-->
+		<div class="btn-more" id="btn-more">MORE DETAILS<span class="arrow"></span></div>
+		<div id="ExpandedBlocker"></div>
+		<div id="ExpandedLoweBlocker"></div>
+		<ul class="link">
+			<li class="test-drive" id="test-drive"><span></span></li>
+			<li class="brochure" id="brochure"><span></span></li>
+			<li class="get-quote" id="get-quote"><span></span></li>
+		</ul>	
+		<!--	<div class="btn-minimise">Minimise Ad</div>-->
+		<div class="logo-jeep"></div>
+		<div id="BlockerLeft"></div>
+		<div id="BlockerRight"></div>
+	  	<div class="close-expanded">
+	  		<img width="25" height="25" src="https://www.gstatic.com/ads/ci/ytclosebutton/1/close_white_shadow.png" />
+	  		<span>Close Expanded</span>
+	  	</div>
+	</div>
+  	<ci-ytclosebutton lang="en" theme="white" shadow="true" id="ytClose_dc" onclick="Enabler.counter(&#39;CTR_Close Ad&#39;);"></ci-ytclosebutton>
+</div>
+	
+<script src="js/gsap/TweenMax.js"></script> 
+<script src="js/jquery/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.let_it_snow.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+function registerTrackingHandler(){
+	return
+	Enabler.exit("Exit_Patriot_More Details");
+	Enabler.exit("Exit_Patriot_Test Drive");
+	Enabler.exit("Exit_Patriot_Brochure");
+	Enabler.exit("Exit_Patriot_Get Quote");
+
+	Enabler.exit("Exit_Compass_More Details");
+	Enabler.exit("Exit_Compass_Test Drive");
+	Enabler.exit("Exit_Compass_Brochure");
+	Enabler.exit("Exit_Compass_Get Quote");
+
+	Enabler.exit("Exit_Renegade_More Details");
+	Enabler.exit("Exit_Renegade_Test Drive");
+	Enabler.exit("Exit_Renegade_Brochure");
+	Enabler.exit("Exit_Renegade_Get Quote");
+
+	Enabler.exit("Exit_Grand Cherokee_More Details");
+	Enabler.exit("Exit_Grand Cherokee_Test Drive");
+	Enabler.exit("Exit_Grand Cherokee_Brochure");
+	Enabler.exit("Exit_Grand Cherokee_Get Quote");
+
+	Enabler.exit("Exit_Wrangler_More Details");
+	Enabler.exit("Exit_Wrangler_Test Drive");
+	Enabler.exit("Exit_Wrangler_Brochure");
+	Enabler.exit("Exit_Wrangler_Get Quote");
+	
+	Enabler.exit("Exit_Cherokee_More Details");
+	Enabler.exit("Exit_Cherokee_Test Drive");
+	Enabler.exit("Exit_Cherokee_Brochure");
+	Enabler.exit("Exit_Cherokee_Get Quote");
+
+	Enabler.counter("CTR_Close Ad");
+	Enabler.counter("CTR_Close Expand");
+
+	Enabler.counter("Mouse Roll-Over_Patriot");
+	Enabler.counter("Mouse Roll-Over_Compass");
+	Enabler.counter("Mouse Roll-Over_Renegade");
+	Enabler.counter("Mouse Roll-Over_Grand Cherokee");
+	Enabler.counter("Mouse Roll-Over_Wrangler");
+	Enabler.counter("Mouse Roll-Over_Cherokee");
+
+	Enabler.counter("CTR_Patriot");
+	Enabler.counter("CTR_Compass");
+	Enabler.counter("CTR_Renegade");
+	Enabler.counter("CTR_Grand Cherokee");
+	Enabler.counter("CTR_Wrangler");
+	Enabler.counter("CTR_Cherokee");
+
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_White");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Dark Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Black Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Patriot_Blue");
+
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Beige");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Sea Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_Dark Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Compass_White");
+
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Mat Black");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Orange");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Brown");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_White");
+	Enabler.counter("Mouse Roll-Over_Color_Renegade_Yellow");
+
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Beige");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Dark Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_Bluish Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Grand Cherokee_White");
+
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Dark Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Light Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_White");
+	Enabler.counter("Mouse Roll-Over_Color_Wrangler_Yellow");
+
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Dark Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Light Grey");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Black");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Blue");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Gold");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Green");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_Red");
+	Enabler.counter("Mouse Roll-Over_Color_Cherokee_White");
+
+	Enabler.counter("CTR_Image load_Expanded Frame__Patriot");
+	Enabler.counter("CTR_Image load_Expanded Frame__Compass");
+	Enabler.counter("CTR_Image load_Expanded Frame__Renegade");
+	Enabler.counter("CTR_Image load_Expanded Frame__Grand Cherokee");
+	Enabler.counter("CTR_Image load_Expanded Frame__Wrangler");
+	Enabler.counter("CTR_Image load_Expanded Frame__Cherokee");
+}
+
+</script>
+
+</body>
+</html>

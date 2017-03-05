@@ -1,0 +1,656 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'arial_narrowregular';
+  src: url("../font/arial_narrow-webfont.eot");
+  src: url("../font/arial_narrow-webfont.eot?#iefix") format("embedded-opentype"), url("../font/arial_narrow-webfont.woff2") format("woff2"), url("../font/arial_narrow-webfont.woff") format("woff"), url("../font/arial_narrow-webfont.ttf") format("truetype"), url("../font/arial_narrow-webfont.svg#arial_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url("../font/ProximaNovaRegular.eot");
+  src: url("../font/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../font/ProximaNovaRegular.woff2") format("woff2"), url("../font/ProximaNovaRegular.woff") format("woff"), url("../font/ProximaNovaRegular.ttf") format("truetype"), url("../font/ProximaNovaRegular.svg#proxima_nova_ltsemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'LeviathanHTFBlack';
+  src: url("../font/LeviathanHTFBlack.eot");
+  src: url("../font/LeviathanHTFBlack.eot") format("embedded-opentype"), url("../font/LeviathanHTFBlack.woff2") format("woff2"), url("../font/LeviathanHTFBlack.woff") format("woff"), url("../font/LeviathanHTFBlack.ttf") format("truetype"), url("../font/LeviathanHTFBlack.svg#LeviathanHTFBlack") format("svg"); }
+@font-face {
+  font-family: 'proxima_nova_ltsemibold';
+  src: url("../font/proximanova-semibold.eot");
+  src: url("../font/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("../font/proximanova-semibold.woff2") format("woff2"), url("../font/proximanova-semibold.woff") format("woff"), url("../font/proximanova-semibold.ttf") format("truetype"), url("../font/proximanova-semibold.svg#proxima_nova_ltsemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+div, p, a, body, h1, ul, li, h2, h3, h4, img {
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  font-family: 'ProximaNovaRegular', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  line-height: 19px; }
+
+#ytClose_dc, .logo-jeep, .main-title, .head-light, .vehicle-light, .light1, .light2, .light3, #hotspot, #minimise-ad, #expanse-ad, .message {
+  position: absolute; }
+
+.vehicle-light, #hotspot {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%; }
+
+#ytClose_dc{
+  top: 1px!important;
+  right: 1px!important;
+  z-index: 9999; 
+}
+
+#ytClose_dc > *{
+  pointer-events:none;
+}
+
+.logo-jeep {
+  bottom: 0px;
+  right: 0px;
+  width: 118px;
+  height: 42px;
+  background: url(../assets/logo-jeep.png) no-repeat; }
+
+.main-title {
+  top: 10px;
+  left: 0px;
+  right: 0px;
+}
+
+.banner {
+  position: relative;
+  width: 970px;
+  height: 500px;
+  display: none;
+}
+
+#ExpandedBlocker{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 970px;
+height: 400px;
+}
+
+
+#ExpandedLoweBlocker{
+    position: absolute;
+    top: 445px;
+    left: 0px;
+    width: 970px;
+    height: 53px;
+}
+
+
+#BlockerLeft{
+position: absolute;
+top: 64px;
+left: 0px;
+width: 90px;
+height: 46px;
+z-index: 9999;
+}
+
+#BlockerRight{
+position: absolute;
+top: 64px;
+left: 878px;
+width: 90px;
+height: 46px;
+z-index: 9999;
+}
+
+#minimise-ad, #expanse-ad {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-color: #000;
+  text-align: center; }
+
+#snow {
+  height: 500px;
+  z-index: 9999;
+  position: absolute;
+  pointer-events: none; }
+
+#expanse-ad {
+  width: 100%;
+  height: 500px;
+  background: url(../assets/expanse-ad.jpg) no-repeat; }
+
+/* Vehicle Lights*/
+#light .vehicle-light {
+  opacity: 0;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  #light .vehicle-light .head-light {
+    background: url(../assets/vehicle_headlight.png) no-repeat;
+    width: 70px;
+    height: 70px; }
+  #light .vehicle-light .light1, #light .vehicle-light .light2, #light .vehicle-light .light3 {
+    width: 300px;
+    height: 150px;
+    bottom: 0px;
+    left: 0px; }
+  #light .vehicle-light .light1 {
+    background: url(../assets/vehicle_lights_1.png) no-repeat -130px 20px; }
+  #light .vehicle-light .light2 {
+    background: url(../assets/vehicle_lights_2.png) no-repeat -20px 35px; }
+  #light .vehicle-light .light3 {
+    background: url(../assets/vehicle_lights_3.png) no-repeat 0px 10px; }
+#light #one-light .left, #light #one-light .right {
+  top: 100px; }
+#light #one-light .left {
+  left: -10px; }
+#light #one-light .right {
+  left: 45px; }
+#light #two-light .left, #light #two-light .right {
+  top: 110px; }
+#light #two-light .left {
+  left: 117px; }
+#light #two-light .right {
+  left: 210px; }
+#light #three-light .light3 {
+  left: 210px; }
+#light #three-light .left, #light #three-light .right {
+  top: 115px; }
+#light #three-light .left {
+  left: 300px; }
+#light #three-light .right {
+  left: 382px; }
+#light #four-light .light3, #light #five-light .light2, #light #six-light .light1 {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: “FlipH”; }
+#light #four-light .light3 {
+  left: 445px; }
+#light #four-light .left, #light #four-light .right {
+  top: 110px; }
+#light #four-light .left {
+  left: 500px; }
+#light #four-light .right {
+  left: 610px; }
+#light #five-light .light2 {
+  width: 320px;
+  left: 650px; }
+#light #five-light .left, #light #five-light .right {
+  top: 100px; }
+#light #five-light .left {
+  right: 200px; }
+#light #five-light .right {
+  right: 140px; }
+#light #six-light .light1 {
+  left: 670px; }
+#light #six-light .left, #light #six-light .right {
+  top: 100px; }
+#light #six-light .left {
+  right: 50px; }
+#light #six-light .right {
+  right: -10px; }
+
+.message {
+  bottom: -5px;
+  left: 0px;
+  right: 0px;
+  opacity: 0; }
+
+/* button Hotspot*/
+li.btn-hotspot {
+  background: url(../assets/hotspot_btn.png) no-repeat 50% 100%;
+  width: 140px;
+  height: 150px;
+  cursor: pointer;
+  margin-right: 10px;
+  float: left;
+  list-style: none;
+  margin-top: 75px;
+  margin-left: 5px;
+  z-index: 9998; }
+
+#hotspot #one-hotspot {
+  width: 130px; }
+#hotspot #two-hotspot {
+  margin-top: 90px; }
+#hotspot #three-hotspot {
+  margin-top: 100px;
+  margin-left: 10px; }
+#hotspot #four-hotspot {
+  margin-top: 100px;
+  margin-left: 50px;
+  background-position: 65% 100%; }
+#hotspot #five-hotspot {
+  margin-top: 90px;
+  margin-left: 30px; }
+#hotspot #six-hotspot {
+  margin: 80px 0px 0px 10px;
+  width: 100px; }
+
+/* Expanse-ad*/
+#expanse-ad .logo-jeep {
+  background: url(../assets/logo-jeep-black.png) no-repeat; }
+#expanse-ad .btn-minimise {
+  font-family: 'arial_narrowregular';
+  font-size: 11.5px;
+  line-height: 130%;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  width: 90px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: 0px; }
+  #expanse-ad .btn-minimise:before {
+    background: url(../assets/icon-minimise.png) no-repeat 0px 0px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    content: '';
+    margin-right: 5px; }
+  #expanse-ad .btn-minimise:hover {
+    color: #ffa602; }
+    #expanse-ad .btn-minimise:hover:before {
+      background-position: 0px -15px; }
+#expanse-ad .btn-more {
+  font-family: 'proxima_nova_ltsemibold';
+  font-size: 16px;
+  line-height: 270%;
+  color: #000;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 0.41px rgba(255, 255, 255, 0.5);
+  text-align: left;
+  background: url(../assets/bg-btn.png) no-repeat;
+  width: 184px;
+  height: 42px;
+  display: inline-block;
+  padding-left: 20px;
+  margin-top: 31px;
+  cursor: pointer;
+  z-index: 40;
+  position: absolute;
+  left: 592px;
+  top: 310px; }
+  #expanse-ad .btn-more span {
+    background: url(../assets/icon-gray.png) no-repeat;
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    top: 12px;
+    right: 35px;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+  #expanse-ad .btn-more:hover span {
+    right: 28px; }
+#expanse-ad .link {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 40; }
+  #expanse-ad .link li {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #000;
+    width: 42px;
+    height: 42px;
+    background-color: gainsboro;
+    border-radius: 8px 0px 0px 8px;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 8px;
+    left: 928px;
+    position: absolute;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s; }
+    #expanse-ad .link li span {
+      background: url(../assets/icon-link.png) no-repeat;
+      width: 42px;
+      height: 42px;
+      display: block;
+      margin-left: 10px; }
+      #expanse-ad .link li span:before {
+        opacity: 0;
+        content: '';
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        color: #FFF; }
+    #expanse-ad .link li:hover {
+      padding-left: 80px;
+      left: 848px !important;
+      background-color: #1f1f1f;
+      color: #dcdcdc; }
+      #expanse-ad .link li:hover span {
+        background-position: 0px -46px !important;
+        position: relative; }
+        #expanse-ad .link li:hover span:before {
+          font-size: 12px;
+          position: absolute;
+          right: 55px;
+          width: 150px;
+          padding-top: 12px;
+          text-transform: uppercase;
+          opacity: 0; }
+  #expanse-ad .link .test-drive {
+    top: 315px; }
+    #expanse-ad .link .test-drive:hover span:before {
+      content: 'TEST DRIVE';
+      opacity: 1; }
+  #expanse-ad .link .brochure {
+    top: 362px; }
+    #expanse-ad .link .brochure:hover span {
+      background-position: -55px -46px !important; }
+    #expanse-ad .link .brochure:hover span:before {
+      content: 'brochure';
+      opacity: 1; }
+  #expanse-ad .link .get-quote {
+    top: 409px; }
+    #expanse-ad .link .get-quote:hover span {
+      background-position: -117px -46px !important; }
+    #expanse-ad .link .get-quote:hover span:before {
+      content: 'get quote';
+      opacity: 1; }
+  #expanse-ad .link .test-drive span {
+    background-position: 0px 0px; }
+  #expanse-ad .link .brochure span {
+    background-position: -55px 0px; }
+  #expanse-ad .link .get-quote span {
+    background-position: -117px 0px; }
+#expanse-ad .information-car {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none; }
+  #expanse-ad .information-car h1 {
+    font-family: 'LeviathanHTFBlack';
+    font-size: 38px;
+    color: #FFF;
+    text-align: center;
+    display: block;
+    margin-top: 25px;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */ }
+  #expanse-ad .information-car .pagination {
+    position: absolute;
+    top: 40px;
+    height: 40px;
+    width: 60px;
+    border: 2px solid #FFF;
+    font-family: 'arial_narrowregular';
+    font-size: 14px;
+    line-height: 280%;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 27px;
+    z-index: 10; }
+    #expanse-ad .information-car .pagination:before {
+      background: url(../assets/icon-arrow.png) no-repeat;
+      width: 4px;
+      height: 7px;
+      content: '';
+      position: absolute;
+      top: 17px;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+    #expanse-ad .information-car .pagination:hover {
+      background: url(../assets/bg-btn.jpg) repeat-x;
+      border-color: #ffa602; }
+      #expanse-ad .information-car .pagination:hover:before {
+        transform: translate(-5px); }
+  #expanse-ad .information-car .pre {
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0; }
+    #expanse-ad .information-car .pre:before {
+      left: 15px; }
+  #expanse-ad .information-car .next {
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0;
+    right: 0px;
+    padding-left: 17px;
+    width: 70px; }
+    #expanse-ad .information-car .next:before {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: “FlipH”;
+      right: 15px; }
+    #expanse-ad .information-car .next:hover:before {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: “FlipH”;
+      right: 10px; }
+  #expanse-ad .information-car .gallery {
+    width: 450px;
+    float: left;
+    margin-top: 30px;
+    padding-left: 100px;
+    position: relative; }
+    #expanse-ad .information-car .gallery .pic {
+      height: 375px;
+      width: 450px;
+      position: relative; }
+      #expanse-ad .information-car .gallery .pic .gallery-color {
+        position: absolute;
+        top: 0px;
+        left: 0px; }
+        #expanse-ad .information-car .gallery .pic .gallery-color li {
+          list-style: none;
+          height: 375px;
+          width: 450px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          opacity: 0;
+          -moz-transition: all .3s;
+          -ms-transition: all .3s;
+          -webkit-transition: all .3s;
+          -o-transition: all .3s;
+          transition: all .3s; }
+          #expanse-ad .information-car .gallery .pic .gallery-color li.active {
+            opacity: 1; }
+    #expanse-ad .information-car .gallery h4 {
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 13px;
+      color: #000;
+      text-align: center;
+      display: block;
+      margin-top: -70px;
+      text-transform: uppercase; }
+  #expanse-ad .information-car .infor {
+    float: right;
+    width: 330px;
+    padding-top: 85px;
+    padding-right: 50px;
+    text-align: left; }
+    #expanse-ad .information-car .infor h2 {
+      font-family: 'LeviathanHTFBlack';
+      font-size: 27px;
+      color: #FFF;
+      text-transform: uppercase;
+      line-height: 110%;
+      -webkit-font-smoothing: antialiased;
+      text-align: left;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+      /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */ }
+    #expanse-ad .information-car .infor h3 {
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 22px;
+      color: #000;
+      text-transform: uppercase;
+      line-height: 110%;
+      padding-top: 15px; }
+    #expanse-ad .information-car .infor p {
+      margin-top: 10px;
+      max-width: 300px; }
+  #expanse-ad .information-car .note {
+    position: absolute;
+    font-size: 11px;
+    bottom: 40px;
+    padding-right: 260px;
+    padding-left: 10px;
+    line-height: 130%;
+    text-align: left;
+    cursor: default;
+     }
+#expanse-ad .information-car.active {
+  display: block !important; }
+#expanse-ad .color-car {
+  margin-top: 10px; }
+  #expanse-ad .color-car li {
+    background-color: #9f9e99;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative; }
+    #expanse-ad .color-car li:before {
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      content: '';
+      border: 2px solid transparent;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+    #expanse-ad .color-car li:hover:before, #expanse-ad .color-car li.active:before {
+      border: 2px solid #fff; }
+#expanse-ad .color-car .color-silver, #expanse-ad .color-car .color-billet {
+  background-color: #959698; }
+#expanse-ad .color-car .color-black {
+  background-color: #1b1b1c; }
+#expanse-ad .color-car .color-white {
+  background-color: #e5e7e8; }
+#expanse-ad .color-car .color-red {
+  background-color: #79101b; }
+#expanse-ad .color-car .color-ecogreen, #expanse-ad .color-car .color-commando, #expanse-ad .color-car .color-green, #expanse-ad .color-car .color-tank {
+  background-color: #615a37; }
+#expanse-ad .color-car .color-granite {
+  background-color: #464649; }
+#expanse-ad .color-car .color-steel {
+  background-color: #353b45; }
+#expanse-ad .color-car .color-trueblue {
+  background-color: #111a2d; }
+#expanse-ad .color-car .color-blue {
+  background-color: #037bbd; }
+#expanse-ad .color-car .color-orange {
+  background-color: #df7a38; }
+#expanse-ad .color-car .color-carbonblack {
+  background-color: #393939; }
+#expanse-ad .color-car .color-sand {
+  background-color: #968a73; }
+#expanse-ad .color-car .color-yellow {
+  background-color: #f8c443; }
+#expanse-ad .color-car .color-cashmere {
+  background-color: #cccc99; }
+#expanse-ad .color-car .color-anvil {
+  background-color: #75838f; }
+
+#jeep3 .gallery, #jeep5 .gallery, #jeep6 .gallery {
+  margin-top: 20px !important; }
+
+#jeep3 .gallery h4, #jeep5 .gallery h4, #jeep6 .gallery h4 {
+  margin-top: -60px !important; }
+
+#jeep3 .infor p {
+  max-width: 320px !important; }
+
+#jeep4 .gallery, #jeep5 .gallery, #jeep6 .gallery {
+  padding-left: 70px !important; }
+
+#jeep4 .gallery h4, #jeep4 .color-car, #jeep5 .gallery h4, #jeep5 .color-car, #jeep6 .gallery h4, #jeep6 .color-car {
+  padding-left: 50px; }
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed; }
+
+.close-expanded{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: auto;
+  bottom: auto;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  z-index: 9999;
+}
+
+.close-expanded span{
+  position: relative;
+  margin-left: -3px;
+  bottom: 9px; 
+  font-family: arial, sans-serif; 
+  font-size: 11px; 
+  letter-spacing: 0.4px; 
+  text-decoration: underline; 
+  color: rgb(255, 255, 255); 
+  text-shadow: rgb(0, 0, 0) 0px 1px 6px;
+}
+
+.close-expanded > *{
+  pointer-events:none;
+}
